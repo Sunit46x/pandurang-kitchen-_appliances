@@ -13,7 +13,11 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-
+@media (max-width: 500px) {
+  .logo{
+    display: none; /* Hide the element when screen width is 500px or less */
+  }
+}
 :root {
 
     /**
