@@ -1829,4 +1829,8 @@ div#bcarousel0 .product-layout .product-thumb .caption p.price {
   padding-top: 30px;
 
 }
-
+@media (max-width: 500px) {
+  .logo{
+    display: none; /* Hide the element when screen width is 500px or less */
+  }
+}
