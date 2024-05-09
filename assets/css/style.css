@@ -385,7 +385,7 @@ body.active {
   /* gap: 20px; */
 }
 
-.logo {
+.logo1 {
   font-size:30px;
   font-weight: var(--fw-700);
   font-family: "IBM Plex Sans", sans-serif;
@@ -394,7 +394,7 @@ body.active {
   text-align: center;
 }
 @media (max-width: 390px) {
-  .logo {
+  .logo1 {
       font-size:30px;
       font-weight: var(--fw-700);
   font-family: "IBM Plex Sans", sans-serif;
@@ -405,7 +405,7 @@ body.active {
 
 .header-action {
   display: flex;
-  gap: 15px;
+  gap: 70px;
 }
 
 .header-action-btn {
@@ -1319,7 +1319,8 @@ a.card-meta-text:is(:hover, :focus) {
    */
 
   .footer-top {
-    grid-template-columns: 1fr 0.75fr 0.6fr 1fr;
+    /* grid-template-columns: 1fr 0.75fr 0.6fr 1fr; */
+    grid-template-columns: 3fr 1.75fr 2.6fr 2fr;
     padding-block-end: 60px;
   }
 
@@ -1706,6 +1707,11 @@ div#bcarousel0 .product-layout .product-thumb .caption p.price {
   font-weight: 600;
   font-style: normal;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center;
 
 }
 
@@ -1791,11 +1797,13 @@ div#bcarousel0 .product-layout .product-thumb .caption p.price {
 }
 @media (max-width: 575px) {
   .card-image {
-    text-align: center;
-    justify-content: center;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text within the container */
   }
-
 }
+
 
 
 /* Card Title */
@@ -1829,8 +1837,74 @@ div#bcarousel0 .product-layout .product-thumb .caption p.price {
   padding-top: 30px;
 
 }
+
+
 @media (max-width: 500px) {
-  .logo{
+  .logo1{
     display: none; /* Hide the element when screen width is 500px or less */
   }
 }
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  /* Hide the scrollbar for webkit-based browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.carousel {
+  display: flex;
+}
+
+.logo {
+  flex: 0 0 20%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.logo img {
+  max-width: 35%;
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 500px) {
+  .logo img {
+    max-width: 75%;
+    height: auto;
+  }
+}
+
+
+  #left-arrow,
+  #right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.333);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6em;
+  }
+
+  #left-arrow {
+    left: 10px;
+  }
+
+  #right-arrow {
+    right: 10px;
+  }
